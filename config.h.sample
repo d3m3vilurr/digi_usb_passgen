@@ -1,0 +1,6 @@
+const char *initial[] = {
+    "password",
+    "c0debabe",
+    "deadbeef",
+    "cafed00d",
+};
