@@ -96,15 +96,13 @@ void setup() {
     }
 
     DigiKeyboard.sendKeyStroke(0);
-    DigiKeyboard.delay(250);
-
-    randomSeed(millis());
-
+    DigiKeyboard.delay(1250);
     select_slot = readInput();
     if (select_slot == 3) {
         need_mode_change = true;
     }
     DigiKeyboard.println(password + (MAX_LENGTH * select_slot));
+    randomSeed(millis());
 }
 
 
@@ -141,6 +139,7 @@ void loop() {
         goto cancel;
     }
 
+    need_mode_change = true;
     switch(mode) {
         case GENERATE:
             generate_password(select_slot);
