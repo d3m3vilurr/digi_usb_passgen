@@ -96,7 +96,8 @@ void setup() {
     }
 
     DigiKeyboard.sendKeyStroke(0);
-    DigiKeyboard.delay(1250);
+    DigiKeyboard.delay(2000);
+
     select_slot = readInput();
     if (select_slot == 3) {
         need_mode_change = true;
